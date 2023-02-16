@@ -1,6 +1,4 @@
-# Purwadhika JCDSOL-09 capstone project module 1
-purwadhika-capstone-project-m1
+# Purwadhika JCDSOL-09 projects
+purwadhika-projects
 
 # Nadhira Aulia Kaffah
-February 2023
-
