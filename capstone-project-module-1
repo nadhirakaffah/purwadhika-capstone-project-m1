@@ -50,7 +50,7 @@ def tambah_stok():
                 continue
             else:
                 input_qty = int(input('Masukkan quantity item ... '))
-                stokgudang[input_item] = [input_qty]
+                stokgudang[input_item] = input_qty
                 print('Item sudah tersimpan.')
                 continue
         elif input_menu == 2:
@@ -71,7 +71,7 @@ def update_stok():
             input_item = (input('Masukkan nama item yang ingin di-update ... ')).lower()
             if input_item in stokgudang:
                 input_qty = int(input('Masukkan quantity item yang baru ... '))
-                stokgudang[input_item] = [input_qty]
+                stokgudang[input_item] = input_qty
                 print('Data {} berhasil di-update.'.format(input_item))
             else:
                 print('Item tidak ditemukan.')
