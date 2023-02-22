@@ -2,13 +2,12 @@ stokgudang = {'kalung':15, 'gelang':10, 'cincin':20}
 
 def tampilkan_stok():
     while True:
-        menu = ('''
+        print('''
         \t TAMPILKAN STOK GUDANG\n
         1 - Tampilkan seluruh stok gudang
         2 - Tampilkan stok item tertentu
         3 - Kembali ke menu utama
         ''')
-        print(menu)
         input_menu = int(input('Masukkan nomor menu ... '))
         if input_menu == 1:
             print('''
@@ -19,7 +18,7 @@ def tampilkan_stok():
                 print('''\t\t{}\t\t{}'''.format(key.capitalize(), val))
             continue
         elif input_menu == 2:
-            input_item = (input('Masukkan nama item yang dicari ... ')).lower()
+            input_item = input('Masukkan nama item yang dicari ... ').lower()
             if input_item in stokgudang:
                 print('''
                 ITEM\t\tQUANTITY
@@ -44,7 +43,7 @@ def tambah_stok():
         ''')
         input_menu = int(input('Masukkan nomor menu ... '))
         if input_menu == 1:
-            input_item = (input('Masukkan nama item yang ingin ditambahkan ... ')).lower()
+            input_item = input('Masukkan nama item yang ingin ditambahkan ... ').lower()
             if input_item in stokgudang:
                 print('Data sudah ada.')
                 continue
@@ -68,7 +67,7 @@ def update_stok():
         ''')
         input_menu = int(input('Masukkan nomor menu ... '))
         if input_menu == 1:
-            input_item = (input('Masukkan nama item yang ingin di-update ... ')).lower()
+            input_item = input('Masukkan nama item yang ingin di-update ... ').lower()
             if input_item in stokgudang:
                 input_qty = int(input('Masukkan quantity item yang baru ... '))
                 stokgudang[input_item] = input_qty
@@ -91,7 +90,7 @@ def hapus_stok():
         ''')
         input_menu = int(input('Masukkan nomor menu ... '))
         if input_menu == 1:
-            input_item = (input('Masukkan nama item yang ingin dihapus ... ')).lower()
+            input_item = input('Masukkan nama item yang ingin dihapus ... ').lower()
             if input_item in stokgudang:
                 input_hapus = (input('''Yakin ingin menghapus data {}? [Y]es/[N]o '''.format(input_item))).upper()
                 if input_hapus == 'Y':
